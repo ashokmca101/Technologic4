@@ -1,0 +1,26 @@
+/* combobox.css */
+.combobox.red {
+	color:orange; 
+	border: 2px solid orange;	
+}
+.textsize
+{
+	font-size: 16px;
+	font-weight: 4px;
+}
+.combobox.green {
+	color:green; 
+	border: 2px solid green;		
+}
+.combobox.yellow {
+	border: 2px solid yellow;		
+}
+.combobox.green1 {
+	color:rgb(16, 189, 143); 
+	border: 2px solid rgb(16, 189, 143);		
+}
+
+.combobox.pink {
+	color:rgb(227, 39, 195); 
+	border: 2px solid rgb(227, 39, 195);		
+}

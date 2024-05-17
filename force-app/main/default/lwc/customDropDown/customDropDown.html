@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Get Coordinates from Zip Code">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Zip Code" type="text" value={zipCode} onchange={handleZipCodeChange}></lightning-input>
+            <lightning-button label="Get Coordinates" onclick={getCoordinates}></lightning-button>
+            <div if:true={latitude} if:false={loading}>Latitude: {latitude}</div>
+            <div if:true={longitude} if:false={loading}>Longitude: {longitude}</div>
+            <template if:true={loading}>
+                <div class="slds-m-top_medium">Loading...</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

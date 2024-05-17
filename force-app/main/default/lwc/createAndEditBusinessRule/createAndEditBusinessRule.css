@@ -1,0 +1,119 @@
+.custom-combobox {
+	/*
+    color:orange; 
+	border: 2px solid none !important;
+	--slds-c-icon-color-foreground-default: #EC7D31;
+	--slds-c-color-border:orange;
+
+	--sds-c-input-color-border: red;
+	--lwc-shadowButtonFocus: 0 0 3px orange !important;
+*/
+	--slds-c-input-color-border: red;
+	--slds-c-icon-color-foreground-default: #EC7D31;
+	--slds-g-color-brand-base-60: orange !important;
+	--lwc-shadowButtonFocus: 0 0 3px orange !important;
+
+}
+.style1{
+	--sds-c-button-icon-color-foreground-default:orange !important;width:65px;
+}
+.dummy{
+	color : blue;
+}
+.inputborder
+{
+	border:orange;
+	color:orangered;
+	--slds-c-input-color-border: red;
+}
+.wdth {
+width: 100px;
+}
+.custom-button .slds-button {
+	border: 2px;
+    border-color: #ff0000; /* Specify the desired border color */
+}
+.dashbutton {
+/*	border-radius: 40px;  slds-button_full-width: 50%;  border-radius-circle:100%;*/
+	border:1px solid #EC7D31;
+	
+	
+	
+}
+
+
+.title-design{
+	background-color: #EC7D31 !important;
+	color: #FFFFFF;
+	border:1px solid #000000;
+}
+.custom-css {
+	--slds-c-button-brand-color-background-hover:#EC7D31;
+    --slds-c-button-brand-color-border-hover:#EC7D31;
+}
+.button-outline {
+	--slds-c-button-text-destructive-color-border : #EC7D31;
+}
+
+
+.rowsectiontitle {
+ /*	border-radius: 18px; */
+	padding: 10px 10px;
+	background-color: #FFFFFF;
+	color: #000000;
+	cursor: pointer;
+	border:1px solid #EC7D31;
+	text-align: center;
+}
+.rowsectiontitle.active{
+	background-color: #EC7D31 !important;
+	color: #FFFFFF;
+	border:1px solid #000000;
+/*	border-radius: 18px; */
+	text-align: center;
+}
+/*
+.cancel {
+	background-color: #FFFFFF !important;
+	color: #000000 !important; 
+	border:1px solid #EC7D31;
+	box-shadow:none;
+	padding:0px 10px;
+} */
+.slds-button {
+	--slds-c-button-brand-color-background-hover:#EC7D31;
+    --slds-c-button-brand-color-border-hover:#EC7D31;
+}
+:host {
+    display: block;
+	--slds-c-button-brand-color-background: #EC7D31;
+    --slds-c-button-brand-color-border: #000000;
+		border-radius: 1px;
+}
+.configinput {
+	
+	--slds-c-input-shadow:#EC7D31;
+	border-color: #EC7D31;
+	border-radius: 0px;
+	color: #000000;
+}
+.configinput::placeholder, .objinput::placeholder {
+    color: #000000;
+}
+
+.red-utility-icon {
+	border: 1px solid none !important;
+        --sds-c-icon-color-foreground-default: #EC7D31;
+		--slds-button_icon-border-filled: #EC7D31;     
+}
+
+.buttonorange {
+	border: 1px solid none !important;
+        --sds-c-icon-color-foreground-default: #EC7D31;
+		--slds-button_icon-border-filled: #EC7D31;     
+}
+.buttonicon
+{
+	--sds-c-icon-color-foreground-default:orange !important;width:65px;;
+
+}

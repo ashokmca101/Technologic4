@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-m-around_medium">
+    <lightning-card  variant="Narrow"  title="Meeting Schedule" icon-name="standard:Meeting_Schedule__c" >       
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" variant="standard" value={Name} onchange={valuechange}
+             label="Name"></lightning-input>
+            <lightning-record-edit-form id="recordViewForm"
+                        record-id=""
+                        object-api-name="Meeting_Schedule__c">
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name="Customer__c" onchange={customerchange} value={customer}></lightning-input-field>
+                <lightning-input-field field-name="User__c" onchange={usrchange} value={usr}></lightning-input-field>
+                <lightning-input-field field-name="Notes__c" onchange={Noteschange} value={Notes}></lightning-input-field>
+            </lightning-record-edit-form>
+            <lightning-button variant="base" label="Save" title="titleName" onclick={saveRecordfinal}></lightning-button>
+        </div>
+    </lightning-card>
+    </div>
+
+</template>

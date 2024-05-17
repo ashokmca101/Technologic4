@@ -1,0 +1,20 @@
+.dummy{
+	color : black;
+}
+.map-container {
+    width: 50%;
+    height: 100px;
+}
+
+.map {
+    width: 30%;
+    height: 50%;
+}
+.ButtonStyle11
+{
+  --sds-c-button-brand-color-background: #3bcf56;
+  --sds-c-button-brand-color-border: #3bcf56;
+  --sds-c-button-brand-color-background-hover: #3bcf56;
+  --sds-c-button-brand-color-border-hover:pink;
+
+}

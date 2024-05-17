@@ -1,0 +1,67 @@
+.dummy{
+	color : black;
+}
+.custom-combobox {
+	--slds-c-input-color-border: red;
+	--slds-c-icon-color-foreground-default: #EC7D31;
+	--slds-g-color-brand-base-60: orange !important;
+	--lwc-shadowButtonFocus: 0 0 3px orange !important;
+	 color:Orange;
+
+}
+.buttonStyle{
+	background-color:orange !important;
+	border-color:orange !important;
+}
+.titlecolor
+{
+	color:Orange;
+}
+.ParentFieldsStyle
+{
+	background-color: orange;
+	color: green;
+	font-size: 16px;
+}
+.ParentObjectStyle
+{
+	background-color: orange;
+	font-size: 18px;
+	color: green;
+	--sds-c-accordion-color:red;
+}
+.rightmargin
+{
+	margin-right: 800px;
+}
+
+.Level1ObjectStyle
+{
+	background-color: rgb(254, 255, 192);
+	font-size: 18px;
+	color: green;
+}
+.Level2ObjectStyle
+{
+	background-color: rgba(255, 0, 221, 0.537);
+	font-size: 18px;
+	color: green;
+}
+.Level3ObjectStyle
+{
+	background-color: rgba(17, 205, 239, 0.263);
+	font-size: 18px;
+	color: green;
+}
+.Level4ObjectStyle
+{
+	background-color: rgba(76, 0, 255, 0.277);
+	font-size: 18px;
+	color: green;
+}
+.Level5ObjectStyle
+{
+	background-color: rgba(255, 0, 13, 0.283);
+	font-size: 18px;
+	color: green;
+}

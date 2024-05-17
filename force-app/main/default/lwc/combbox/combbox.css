@@ -1,0 +1,62 @@
+.dummy{
+	color : blue;
+}
+.custom-combobox {
+    color:orange; 
+	border: 2px solid none !important;
+	--slds-c-icon-color-foreground-default: #EC7D31;
+	--slds-c-color-border:orange;
+	/* --sds-c-input-radius-border: 18px; */
+	--sds-c-input-color-border: red;
+	
+	outline: 1px solid red;
+
+}
+
+
+/* combobox.css */
+.combobox.orange {
+/*    color:orange; 
+	border: 2px solid none !important;
+	--slds-c-icon-color-foreground-default: #EC7D31;
+	--slds-c-color-border:orange;  */
+	--slds-c-input-color-border: red;
+	--slds-c-icon-color-foreground-default: #EC7D31;
+	--slds-g-color-brand-base-60: orange !important;
+	--lwc-shadowButtonFocus: 0 0 3px orange !important;
+}
+.textsize
+{
+	font-size: 16px;
+	font-weight: 4px;
+}
+.combobox.green {
+    color:green; 
+	border: 2px solid none !important;
+	--slds-c-icon-color-foreground-default: green;
+	--slds-c-color-border:green;
+	--slds-c-input-color-border: green;			
+}
+.combobox.yellow {
+	color : yellow;
+	border: 2px solid none !important;
+	--slds-c-icon-color-foreground-default: yellow;
+	--slds-c-color-border:yellow;
+
+	--slds-c-input-color-border: yellow;		
+}
+.combobox.gold {
+	color:gold; 
+	border: 2px solid none !important;
+	--slds-c-icon-color-foreground-default: #gold;
+	--slds-c-color-border:gold;
+	--slds-c-input-color-border: gold;			
+}
+
+.combobox.pink {
+	color:rgb(198, 18, 168);  
+	border: 2px solid none !important;
+	--slds-c-icon-color-foreground-default: rgb(198, 18, 168);
+	--slds-c-color-border:rgb(198, 18, 168);
+	--slds-c-input-color-border: rgb(198, 18, 168);	
+}

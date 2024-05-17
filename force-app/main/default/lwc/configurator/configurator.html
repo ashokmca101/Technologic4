@@ -1,0 +1,73 @@
+<template>
+
+    <template if:true={editconfigwindow}>
+        <c-edit-configurator config-record={configRecord} config-name={configName} onafteredit={handleafteredit} > </c-edit-configurator>
+    </template>
+
+        <template if:true={showConfigs}>
+        <lightning-card   variant="Narrow"  title="Edit Configurator" icon-name="standard:Configurator__c">
+            <div class="slds-m-around_large">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                    <span>
+                        <lightning-combobox
+                                    name="Config Name"
+                                    label="Select Configurator to Edit"
+                                    value={confvalue}
+                                    options={configList}
+                                    placeholder="None" class="custom-combobox"
+                                    onchange={handleChangeConfig} ></lightning-combobox>
+                    </span>
+                    </div>
+                    <div class="slds-col">
+                    <span>
+                        <button class="slds-button slds-button_brand buttonStyle slds-m-top_large"  onclick={handleEditConfig} >Edit</button>
+                    </span>
+                    </div>
+                    <div class="slds-col">
+                    <span>
+                        <button class="slds-button slds-button_brand buttonStyle slds-m-top_large"  onclick={handleEditCancel} >Cancel</button>
+                    </span>
+                    </div>                    
+                </div>
+            </div>
+        </lightning-card>
+        </template>
+        <template if:true={mainwindow}>
+            <lightning-card  variant="Narrow"  title="Configurator Tab" icon-name="standard:Configurator__c">
+                <div class="slds-m-around_large">
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <span> 
+                                <button class="slds-button slds-button_brand buttonStyle"  onclick={handleEdit} >Edit Configurator</button>
+                            </span>
+                        </div>     
+                        <div class="slds-col rightmargin">
+                            <span> 
+                                <button class="slds-button slds-button_brand buttonStyle"  onclick={handleNew} >Create New Configurator</button>
+                            </span>
+                        </div>                    
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+        <template if:true={shwoModal}>
+
+            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_medium">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">New Configurator</h1>
+                    </div>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <c-create-configurator onaftercreate={handleCreateChild}> </c-create-configurator>
+                    </div>
+                    
+                    <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_brand buttonStyle"  onclick={closeModal}>Close</button>
+                    </div> 
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+
+        </template>    
+</template>

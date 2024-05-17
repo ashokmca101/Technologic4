@@ -1,0 +1,59 @@
+<template>
+	<div>
+		<template if:true={showWindow}>
+			<template if:true={showRules}>
+				Total Business Rules : {Total_Records_Count}
+				<table class="slds-table slds-table_cell-buffer slds-p-around_medium" width="60%">
+					<tbody>
+						<template for:each={customRecords} for:item="row" for:index="index">
+							<tr key={row.key}>
+								<td data-label="Column 1" style="width: 40%;">
+									<!-- data-id={row.key}  -->
+									<div class="red-box">
+										<table>
+											<template for:each={row.brc} for:item="b" for:index="indexx">
+												<tr key={b}>
+													<td> {b}</td>
+												</tr>
+											</template>
+										</table>
+									</div>
+								</td>
+								<td data-label="Column 1" style="width: 10%;">
+								
+                                    <lightning-icon icon-name="utility:edit" alternative-text="Edit"
+										onclick={handleEdit} data-id={row.key}
+										style={iconStyle}  size='small'></lightning-icon>
+										<lightning-icon icon-name="utility:dash" alternative-text="Delete"
+										onclick={deleteRule} data-id={row.key}
+										style={iconStyle}  size='small'></lightning-icon>
+								</td>
+								
+							</tr>
+						</template>
+					</tbody>
+				</table>
+
+				<div class="slds-p-around_medium">
+					<br/>
+					
+                    <button class="slds-button slds-button_brand"  style={buttonStyle} onclick={addNewRule} >Add Business Rule</button>
+				</div>
+
+			</template>
+			<template if:false={businessRuleRecords}>
+				No record Values to Display
+			</template>
+		</template>
+
+		<!-- Edit Functionality  -->
+		<template if:true={editRecordwindow}>
+			<div class="slds-p-around_medium">
+				<c-create-and-edit-business-rule json-text={jsonString} createfunction={createRule}
+					editfunction={editRule} businessrule-record={editRecord} businessrulewindow=true
+					oncreateedit={createeditchange}></c-create-and-edit-business-rule>
+			</div>
+		</template>
+
+	</div>
+</template>

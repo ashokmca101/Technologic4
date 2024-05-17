@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Scan Photo">
+        <lightning-button label="Scan" onclick={handleScan}></lightning-button>
+        <template if:true={scannedImage}>
+            <img src={scannedImage} alt="Scanned Photo" />
+        </template>
+    </lightning-card>
+</template>

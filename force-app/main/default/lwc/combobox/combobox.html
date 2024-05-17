@@ -1,0 +1,12 @@
+<!-- combobox.html -->
+<template>
+    <div class="textsize">
+        {labeltitle}<br/>        
+        <select onchange={handleChange} class={getcombocolor} disabled={isdisabled} >
+            <lightning-icon icon-name="utility:down" class="slds-icon slds-icon_x-small slds-icon-text-default" size="x-small"></lightning-icon>
+            <template for:each={options} for:item="option">
+                <option key={option.value} value={option.value}>{option.label}</option>
+            </template>
+        </select>
+    </div>
+</template>

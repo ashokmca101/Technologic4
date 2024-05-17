@@ -1,0 +1,136 @@
+<template>
+    <div class="slds-m-around_large">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-m-right_x-large">
+                <span> 
+                    <lightning-input type="text" variant="standard" name="Template Name" label="Template Name" 
+                    placeholder="type here..." class="custom-combobox" onchange={changeName}></lightning-input>
+                </span>
+            </div>     
+            <div class="slds-col slds-m-top_large rightmargin">
+                <span> 
+                    <button class="slds-button slds-button_brand buttonStyle"  onclick={handleSave} >Save</button>
+                </span>
+            </div>                    
+        </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col rightmargin">
+            <span>
+                    <lightning-layout-item padding="around-small">
+                        <lightning-combobox
+                        name="Object Name"
+                        label={titleofObject}
+                        value={objvalue}
+                        options={ObjectList}
+                        placeholder="None" class="custom-combobox"
+                        onchange={handleChangeMainObject} ></lightning-combobox>
+                    </lightning-layout-item>                
+            </span>
+        </div>
+        <div class="slds-col"> <span> </span> </div> 
+        <div class="slds-col"> <span> </span> </div>       
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <span>
+                           <template if:true={showf}>
+                                <lightning-dual-listbox
+                                    source-label="Available Fields"
+                                    selected-label="Selected Fields"
+                                    options={fieldList}
+                                    value={fieldValue}
+                                    onchange={handleChangeFields}
+                                    class="titlecolor">
+                                </lightning-dual-listbox>
+                            </template>                
+            </span>
+        </div>
+        <div class="slds-col">
+            <span>
+                            <template if:true={showfv}> 
+                                <lightning-accordion allow-multiple-sections-open class={Level1ObjectStyle}>
+                                    <lightning-accordion-section name={levelObject1} label={levelObject1} class={Level1ObjectStyle}>
+                                        <div class="Level1ObjectStyle">
+                                        <template for:each={Level1} for:item="fieldItem" for:index="index">
+                                            <ul key={fieldItem}> 
+                                                {fieldItem}<br/>
+                                            </ul>
+                                        </template>
+                                        </div>
+                                        <!-- level 2 -->
+                                        <template if:true={levelObject2}>
+                                            <lightning-accordion-section name={levelObject2} label={levelObject2} class={Level2ObjectStyle}>
+                                                <div class="Level2ObjectStyle">
+                                                <template for:each={Level2} for:item="fieldItem" for:index="index">
+                                                    <ul key={fieldItem}> 
+                                                        {fieldItem}<br/>
+                                                    </ul>
+                                                </template>
+                                                </div>
+
+                                            <!-- level 3 -->
+                                                <template if:true={levelObject3}>
+                                                    <lightning-accordion-section name={levelObject3} label={levelObject3} class={Level3ObjectStyle}>
+                                                        <div class="Level3ObjectStyle">
+                                                        <template for:each={Level3} for:item="fieldItem" for:index="index">
+                                                            <ul key={fieldItem}> 
+                                                                {fieldItem}<br/>
+                                                            </ul>
+                                                        </template>
+                                                        </div>
+                                                        <!-- level 4 -->
+                                                            <template if:true={levelObject4}>
+                                                                <lightning-accordion-section name={levelObject4} label={levelObject4} class={Level4ObjectStyle}>
+                                                                    <div class="Level4ObjectStyle">
+                                                                    <template for:each={Level4} for:item="fieldItem" for:index="index">
+                                                                        <ul key={fieldItem}> 
+                                                                            {fieldItem}<br/>
+                                                                        </ul>
+                                                                    </template>
+                                                                    </div>
+
+                                                                <!-- level 5 -->
+                                                                    <template if:true={levelObject5}>
+                                                                        <lightning-accordion-section name={levelObject5} label={levelObject5} class={Level5ObjectStyle}>
+                                                                            <div class="Level5ObjectStyle">
+                                                                            <template for:each={Level5} for:item="fieldItem" for:index="index">
+                                                                                <ul key={fieldItem}> 
+                                                                                    {fieldItem}<br/>
+                                                                                </ul>
+                                                                            </template>
+                                                                            </div>
+                                                                        </lightning-accordion-section>
+                                                                    </template>
+                                                                    <!--  level5 ends -->
+
+                                                                </lightning-accordion-section>
+                                                            </template>
+                                                            <!--  level4 ends -->
+
+                                                    </lightning-accordion-section>
+                                                </template>
+                                                <!--  level3 ends -->
+
+
+                                            </lightning-accordion-section>
+                                        </template>
+                                        <!--  level2 ends -->
+                                    </lightning-accordion-section>
+                                </lightning-accordion>
+                            </template>                
+            </span>
+        </div>
+    </div>
+
+
+    <lightning-layout>
+        <lightning-layout-item padding="around-small">
+            <button class="slds-button slds-button_brand buttonStyle"  onclick={levelUp} >Add Next Level</button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+            <button class="slds-button slds-button_brand buttonStyle"  onclick={refreshAll} >Refresh</button>
+        </lightning-layout-item>        
+    </lightning-layout>    
+
+    </div>
+</template>

@@ -1,0 +1,45 @@
+<template>
+  <template if:true={showWindow}>
+        <!-- MODAL WINDOW STARTS -->
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+
+                <lightning-button-icon icon-name="utility:close"  
+                variant="border-filled" alternative-text="Bookmark" onclick={closeModal}
+                class="slds-text-align_right slds-m-left_xx-small" 
+                title="Bookmark"></lightning-button-icon>
+                <!--
+                <lightning-icon class="slds-text-align_right slds-m-left_xx-small" 
+                onclick={closeModal} variant="border-filled" icon-name="utility:close" 
+                alternative-text="Indicates close"> </lightning-icon> -->
+                <div class="slds-modal__content" id="modal-content-id-1">            
+                    <div class="slds-box slds-align_absolute-center title-design" style="font-size: 14px;">
+                    <p>Business Rules</p>
+                    </div>  
+                    <lightning-card title="Template Name" variant="Narrow">
+                         <div class="slds-grid slds-p-around_medium">
+                                <div class="slds-col slds-size_1-of-6 secborder">
+                                     <div class={parentClass}  onclick={showParentContent}>Basic Condition</div>
+                                </div>
+                               <div class="slds-col slds-size_1-of-6 secborder">
+                                    <div class={childClass}  onclick={showChildContent}>Advanced Condition</div>
+                             </div>                                                          
+                          </div>
+                            <template if:true={mainwindow}>
+                                <div class="slds-p-around_medium">
+                                    <c-show-business-rules json-string={jsonString} show-window=true></c-show-business-rules> 
+                                </div>
+                            </template>                                        
+                                <template if:true={showAdvanced}>
+                                                            <div class="slds-p-left_medium">
+                                                                <br/><br/><br/><br/><br/><br/>
+                                                                Advanced Condition
+                                                            </div>
+                                </template>
+                    </lightning-card>            
+                </div>                       
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+   </template>
+</template>

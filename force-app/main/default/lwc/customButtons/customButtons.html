@@ -1,0 +1,33 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Buttons Styles" icon-name="standard:account">
+        <div class="slds-grid slds-gutters slds-m-around_xx-large">
+            <div class="slds-col">
+                <span>
+                    <lightning-button variant="brand" class="button-color" label="Lightning Button" title="titleName" ></lightning-button>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span>
+                    <lightning-button-icon variant="brand" class="button-icon-color"  icon-name="utility:user" ></lightning-button-icon>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span>
+                     <lightning-icon icon-name="utility:add" class="icon-color" ></lightning-icon>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span>
+                    <button class="slds-button slds-button_brand only-button-color"   >Only Button</button>
+                </span>
+            </div>   
+            <div class="slds-col">
+                <span>
+                    <lightning-button variant={varianttype}  label="brand-outline" 
+                    title="titleName" onclick={changeBrand} disabled={disableButton} icon-name='utility:contract_line_outcome'
+                    ></lightning-button>
+                </span>
+            </div>                      
+        </div>
+    </lightning-card> 
+</template>

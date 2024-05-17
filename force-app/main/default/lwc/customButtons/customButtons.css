@@ -1,0 +1,49 @@
+.dummy{
+	color : black;
+}
+
+/* setting button brand icon color */
+.button-color
+{
+	display: block;
+	--slds-c-button-brand-color-background: #EC7D31;
+    --slds-c-button-brand-color-border: #201dca;
+		border-radius: 1px;	
+}
+
+.button-color
+{
+	display: block;
+	--slds-c-button-brand-color-background: #EC7D31;
+    --slds-c-button-brand-color-border: #201dca;
+		border-radius: 1px;
+	
+}
+
+.button-icon-color
+{
+	color:red;
+	--slds-button_icon-current-color:orange;
+}
+
+/* setting Icon Color */
+.icon-color
+{
+	background-color:orange;
+	
+}
+
+.only-button-color
+{
+	background-color:rgb(15, 102, 42) !important;
+	border-color:rgb(184, 50, 9) !important;
+}
+/*
+// another way to set Button Bran coloe for all page *
+:host {
+    display: block;
+	--slds-c-button-brand-color-background: #EC7D31;
+    --slds-c-button-brand-color-border: #000000;
+		border-radius: 1px;
+}
+*/

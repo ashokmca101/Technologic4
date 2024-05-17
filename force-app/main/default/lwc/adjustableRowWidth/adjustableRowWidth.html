@@ -1,0 +1,256 @@
+<template>
+    <!--
+    <div class="container">        
+        <lightning-card  variant="Narrow"  title="Contacts Table" icon-name="standard:contact">
+            <lightning-datatable
+                key-field='id'
+                data={dataList}
+                columns={columnsList}
+                onrowaction={handleRowAction}>
+            </lightning-datatable>
+        </lightning-card>       
+    </div>
+
+    <div class="container">        
+        <lightning-card  variant="Narrow"  title="Contacts Table 1" icon-name="standard:contact">
+
+            <table aria-multiselectable="true" 
+                       class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large slds-table_edit slds-table_fixed-layout slds-table_resizable-cols slds-tree slds-table_tree "
+                       role="treegrid" aria-label="Example tree grid with deep nesting">
+        <thead>
+            <tr class="slds-line-height--reset">
+                <th class="slds-is-resizable slds-text-title--caps" scope="col" style={tabStyle}>
+                    <span class="slds-truncate" title="Name">Name</span>
+                    <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-602" tabindex="0" />
+                        <span class="slds-resizable__handle" onmousedown={calculateWidth} ondrag={setNewWidth}>
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+                    </div>
+                </th>
+             
+                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+                    <span class="slds-truncate" title="Close Date">Phone</span>
+
+                    <div class="slds-float_right slds-p-right_small">
+                     <lightning-icon icon-name='utility:filterList' style={filterIconStyle} alternative-text='Apply filter'  size='x-small' 
+                        title='filterList'>                                                
+                      </lightning-icon>  
+                    </div>                     
+
+                    <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-604" tabindex="0" />
+                        <span class="slds-resizable__handle" onmousedown={calculateWidth} ondrag={setNewWidth}>
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+                    </div>
+
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+                    <span class="slds-truncate" title="Stage">Stage</span>
+                    <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-605" tabindex="0" />
+                        <span class="slds-resizable__handle" onmousedown={calculateWidth} ondrag={setNewWidth}>
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+                    <span class="slds-truncate" title="Confidence">Account Owner</span>
+                    <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-606" tabindex="0" />
+                        <span class="slds-resizable__handle" onmousedown={calculateWidth} ondrag={setNewWidth}>
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="slds-hint-parent">
+                <th scope="row">
+                    <div class="slds-truncate" title="Acme - 1,200 Widgets"><a href="javascript:void(0);">Acme - 1,200 Widgets</a></div>
+                </th>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Acme">Acme</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="4/10/15">(336) 222-7000</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Value Proposition">Value Proposition</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="30%">SNani</div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <th scope="row">
+                    <div class="slds-truncate" title="Acme - 200 Widgets"><a href="javascript:void(0);">Acme - 200 Widgets</a></div>
+                </th>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Acme">Acme</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="1/31/15">(336) 333-7000</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Prospecting">Prospecting</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="60%">Acm</div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <th scope="row">
+                    <div class="slds-truncate" title="salesforce.com - 1,000 Widgets"><a href="javascript:void(0);">salesforce.com - 1,000 Widgets</a></div>
+                </th>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="salesforce.com">salesforce</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="1/31/15 3:45PM">(336) 233-7777</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Id. Decision Makers">Id. Decision Makers</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="70%">sales</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </lightning-card>   
+    
+    </div>
+-->
+
+
+    <div class="container slds-m-around_medium" >   
+    
+        <lightning-card  variant="Narrow"  title="Contacts Table 2" icon-name="standard:contact">
+        <table aria-multiselectable="true" 
+                       class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large slds-table_edit slds-table_fixed-layout slds-table_resizable-cols slds-tree slds-table_tree "
+                       role="treegrid" aria-label="Example tree grid with deep nesting">
+        <thead>
+            <tr class="slds-line-height--reset">
+                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style={tabStyle} >
+                    <span class="slds-truncate" title="Name">First Name</span>
+                    <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-101" tabindex="0" />
+                        <span class="slds-resizable__handle"  onmousedown={calculateWidth}  ondrag={setNewWidth}>
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+                    </div>                    
+                </th>
+
+                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style={tabStyle}>
+                    <span class="slds-truncate" title="Name">Last Name</span>
+                   <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-102" tabindex="0" />
+                        <span class="slds-resizable__handle" onmousedown={calculateWidth} ondrag={setNewWidth}>
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+                    </div> 
+                </th>             
+                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style={tabStyle}>
+                    <span class="slds-truncate" title="Close Date">Phone</span>
+                    <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-103" tabindex="0" />
+                        <span class="slds-resizable__handle" onmousedown={calculateWidth} ondrag={setNewWidth}>
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style={tabStyle}>
+                    <span class="slds-truncate" title="Stage">Stage</span>
+                    <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-104" tabindex="0" />
+                        <span class="slds-resizable__handle" onmousedown={calculateWidth} ondrag={setNewWidth}>
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style={tabStyle}>
+                    <span class="slds-truncate" title="Confidence">Account Owner</span>
+                    <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-105" tabindex="0" />
+                        <span class="slds-resizable__handle" onmousedown={calculateWidth} ondrag={setNewWidth}>
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="slds-hint-parent">
+                <th scope="row">
+                    <div class="slds-truncate" title="Acme - 1,200 Widgets"><a href="javascript:void(0);">Acme - 1,200 Widgets</a></div>
+                </th>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Acme">Acme</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="4/10/15">(336) 222-7000</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Value Proposition">Value Proposition</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="30%">SNani</div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <th scope="row">
+                    <div class="slds-truncate" title="Acme - 200 Widgets"><a href="javascript:void(0);">Acme - 200 Widgets</a></div>
+                </th>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Acme">Acme</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="1/31/15">(336) 333-7000</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Prospecting">Prospecting</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="60%">Acm</div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <th scope="row">
+                    <div class="slds-truncate" title="salesforce.com - 1,000 Widgets"><a href="javascript:void(0);">salesforce.com - 1,000 Widgets</a></div>
+                </th>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="salesforce.com">salesforce</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="1/31/15 3:45PM">(336) 233-7777</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="Id. Decision Makers">Id. Decision Makers</div>
+                </td>
+                <td role="gridcell">
+                    <div class="slds-truncate" title="70%">sales</div>
+                </td>
+            </tr>
+            <template if:true={dataList}>
+              <template for:each={dataList} for:item="row" for:index="index">
+                <tr class="slds-hint-parent" key={row.id}>
+                    <td role="gridcell"> <div class="slds-truncate" title="70%">{row.name}</div> </td>
+                    <td role="gridcell"> <div class="slds-truncate" title="70%">{row.website}</div> </td>
+                    <td role="gridcell"> <div class="slds-truncate" title="70%">{row.phone}</div> </td>
+                    <td role="gridcell"> <div class="slds-truncate" title="70%">{row.amount}</div> </td>
+                    <td role="gridcell"> <div class="slds-truncate" title="70%">{row.closeAt}</div> </td>                                        
+                </tr>
+              </template>
+
+            </template>
+        </tbody>
+    </table>
+    </lightning-card>   
+    
+    </div>
+
+
+</template>

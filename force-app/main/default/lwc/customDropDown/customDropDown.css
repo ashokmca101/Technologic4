@@ -1,0 +1,40 @@
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+
+}
+
+.selected-option {
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+.dropdown.open {
+    display: block;
+}
+
+.dropdown-option {
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-option:hover {
+    background-color: #ddd;
+}
+
+.icon {
+    margin-right: 5px;
+}

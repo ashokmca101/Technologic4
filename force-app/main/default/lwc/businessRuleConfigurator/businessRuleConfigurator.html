@@ -1,0 +1,166 @@
+<template>
+  <template if:true={showWindow}>
+    <!-- MODAL WINDOW STARTS -->
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_large">
+        <div class="slds-modal__container">
+            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                <span class="slds-assistive-text">Cancel and close</span>
+            </button>
+            <!--
+            <div class="slds-modal__header">
+             <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate title-design">Modal header</h1>
+            </div>
+            -->
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">            
+                <div class="slds-box slds-align_absolute-center title-design" style="font-size: 14px;">
+                <p>Business Rules</p>
+                </div>  
+                <!-- MENU STARTED-->
+                <lightning-card title="Template Name" variant="Narrow">
+                    <div class="slds-grid slds-p-around_medium">
+                            <div class="slds-col slds-size_1-of-6 secborder">
+                                <div class={parentClass}  onclick={showParentContent}>Basic Condition</div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-6 secborder">
+                                <div class={childClass}  onclick={showChildContent}>Advanced Condition</div>
+                            </div>                                                          
+                    </div>
+                    <!-- MENU ENDED-->
+                    <!-- BASIC CONDITION WINDOW STARTED-->
+                    <template if:true={showParent}>
+                        <div class="slds-p-horizontal_xx-small">                                     
+                                <template for:each={rows} for:item="row" for:index="index">
+                                <div key={row.key}> 
+                                    <div class="slds-p-top_medium">
+                                        <lightning-layout size="12" vertical-align="center" class="x-large">
+                                            <lightning-layout-item size="11" padding="around-small">
+                                                <div class="slds-box" style="border-color: orange;">                      
+                                                <lightning-layout vertical-align="center" class="x-large">
+                                                        <lightning-layout-item flexibility="auto" padding="around-small">
+                                                            
+                                                                <lightning-combobox
+                                                                    data-id={row.key}
+                                                                    name="selected Object"
+                                                                    label="Select Object"
+                                                                    value={row.objectvalue}
+                                                                    placeholder="Select Object"
+                                                                    options={objlist}
+                                                                    onchange={handleChange} 
+                                                                    class="custom-combobox"></lightning-combobox>
+                                                           
+                                                        </lightning-layout-item>                                                    
+                                                        <lightning-layout-item flexibility="auto" padding="around-small">
+                                                            
+                                                                <lightning-combobox
+                                                                    data-id={row.key}
+                                                                    name="selected field"
+                                                                    label="Select Field"
+                                                                    value={row.fieldvalue}
+                                                                    placeholder="Select Field"
+                                                                    options={fieldsList}
+                                                                    onchange={handleChange} 
+                                                                    class="custom-combobox"></lightning-combobox>
+                                                            
+                                                        </lightning-layout-item>
+                                                        <lightning-layout-item flexibility="auto" padding="around-small">
+                                                            
+                                                                <lightning-combobox
+                                                                    data-id={row.key}
+                                                                    name="selectoperator"
+                                                                    label="Select Operator"
+                                                                    value={row.operatorselected}
+                                                                    placeholder="Select Operator"
+                                                                    options={operator}
+                                                                    onchange={handleChange} 
+                                                                    class="custom-combobox"
+                                                                    ></lightning-combobox>                            
+                                                            
+                                                        </lightning-layout-item>
+                                                        <lightning-layout-item flexibility="auto" padding="around-small">
+                                                            <div class="custom-box">
+                                                                <lightning-input data-id={row.key} type="number" label="Value" value={row.val} onchange={handleChange}></lightning-input>
+                                                            </div>
+                                                        </lightning-layout-item>
+                                                        <lightning-layout-item flexibility="auto" padding="around-small">
+                                                            <div class="custom-box">
+                                                                <lightning-input class="custom-combobox" data-id={row.key} type="color" name="input-color" label="Color" value={row.colorvalue} onchange={handleChange}></lightning-input>
+                                                            </div>
+                                                        </lightning-layout-item>
+                                                        <!--
+                                                        <lightning-layout-item flexibility="auto" padding="around-small">
+                                                            <div class="custom-box">
+
+                                                                    <lightning-button data-id={row.key} icon-name="utility:delete" onclick={deleteRow}>
+                                                                        
+                                                                    </lightning-button>
+                                                                    
+                                                            </div>
+                                                        </lightning-layout-item>
+                                                        -->
+                                                    </lightning-layout>            
+                                                </div>
+                                            </lightning-layout-item >
+                                        <lightning-layout-item size="1">
+                                            <div class="custom-box slds-text-align_centeer ">
+                                                <lightning-button-icon data-id={row.key} icon-name="utility:dash" style="width:65px"  onclick={deleteRow}>                                                                        
+                                                </lightning-button-icon>
+                                                                    
+                                                            </div>
+                                            </lightning-layout-item> 
+                                        </lightning-layout>
+                                    </div>
+                                    </div>           
+                                </template>                               
+                            <div  padding="horizontal-small" class="slds-text-align_right slds-m-right_xx-large">
+                                <lightning-button-icon icon-name="utility:add" style="width:65px;"  onclick={addRow}></lightning-button-icon>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-p-left_medium">
+                            <div class="slds-col slds-size_1-of-4">
+                                <div class="slds-form-element">
+                                    <div class="slds-form-element__control">
+                                        <input type="text"   placeholder="1 AND 2" class="slds-input configinput" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--
+                        <div class="slds-m-around_xx-large slds-align_absolute-center">
+                                <div class="slds-grid slds-gutters ">
+                                <div class="slds-col">
+                                    <span><button class="slds-button cancel slds-m-right_x-small" onclick={handleCancel} label="Cancel">Cancel</button></span>                                                                    
+                                </div>
+                                <div class="slds-col">
+                                    <span><button class="slds-button slds-button_brand  slds-m-right_small"  onclick={handleSave}  label="Save">Save</button></span>                                    
+                                </div>
+                                </div>
+                        </div> -->
+                    </template>
+                    <!-- BASIC CONDITION WINDOW ENDED-->
+                    <template if:true={showChild}>
+                        Advanced Condition
+                    </template>
+
+<!-- test -->
+
+
+ 
+
+<!-- test ends -->
+
+              <div class="slds-align_absolute-center">
+                <button class="slds-button slds-button_neutral" onclick={handleCancel} aria-label="Cancel and close">Cancel</button>
+                <!-- <button class="slds-button slds-button_brand"  onclick={handleSave} >Save</button> -->
+                <lightning-button variant="brand" label="Save" title="titleName" onclick={handleSave}></lightning-button>
+                <lightning-button-icon icon-name="utility:add" style="width:65px"></lightning-button-icon>
+              </div>
+                </lightning-card>            
+            </div>                       
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    <!-- MODAL WINDOW ENDS -->
+
+
+
+  </template>
+</template>

@@ -1,0 +1,70 @@
+<template>
+    <lightning-tabset variant="scoped">
+        <lightning-tab label="Personalization View User">
+            One Content !
+        </lightning-tab>
+        <lightning-tab label="Change DheeGrid Style">
+
+            <lightning-accordion allow-multiple-sections-open>
+                <lightning-accordion-section name="Theme_Color" label="Theme Color">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <span>
+                            <lightning-input type="color" onchange={changeInput} name="input-primaryColor-color" 
+                            label="Primary Color" value={primaryColor}></lightning-input>
+                        </span>
+                    </div>
+                    <div class="slds-col">
+                        <span>
+                            <lightning-input type="color" onchange={changeInput} name="input-secondaryColor-color" 
+                            label="Secondary Color" value={secondaryColor}></lightning-input>
+                        </span>
+                    </div>
+                    <div class="slds-col">
+                        <span>
+                            <lightning-input type="color" onchange={changeInput} name="input-teritaryColor-color" 
+                            label="tertiary Color" value={teritaryColor}></lightning-input>
+                        </span>
+                    </div>
+                </div>       
+                        
+                </lightning-accordion-section>
+
+                <lightning-accordion-section name="Font_Color" label="Font Color">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <span>
+                            <lightning-input type="color" onchange={changeInput} name="input-lightTextColor-color" 
+                            label="Line Text Color" value={lightTextColor}></lightning-input>
+                        </span>
+                    </div>
+                    <div class="slds-col">
+                        <span>
+                            <lightning-input type="color" onchange={changeInput} name="input-darkTextColor-color" 
+                            label="Dark Text Color" value={darkTextColor}></lightning-input>
+                        </span>
+                    </div>
+                </div> 
+                    <p style={FontLineTextColorStyle}>Line Text Color</p>
+                    <p style={FontDarkTextColorStyle}>Dark Text Color</p>                
+                </lightning-accordion-section>
+
+                <lightning-accordion-section name="Font_Size" label="Font Size">
+                    <lightning-slider label="Font Size for Text in px" name="input-fontSizeText" onchange={changeInput}  min="10" max="20" value={fontSizeText} ></lightning-slider>
+                    <lightning-slider label="Font Size for Heading in px" name="input-fontSizeHeading" onchange={changeInput} min="10" max="30" value={fontSizeHeading}></lightning-slider>                
+                    <p style={FontSizeStyle}>Font Size for Text</p>
+                    <p style={FontHeaddingSizeStyle}>Font Size for Heading</p>                    
+                </lightning-accordion-section>
+            </lightning-accordion>            
+                    <br/>
+                    <div style="text-align:center ;">
+                        <lightning-button label="Save" onclick={handleSave}></lightning-button>
+                        <lightning-button label="Reset" onclick={ResetChanges}></lightning-button>
+                    </div>            
+
+        </lightning-tab>
+        <lightning-tab label="Other Settings">
+            Three Content !
+        </lightning-tab>
+    </lightning-tabset>
+</template>
